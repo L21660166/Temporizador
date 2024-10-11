@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporizador</title>
+    <style>
+        #temporizador {
+            font-size: 2em;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="temporizador">50</div>
+    <script>
+        let tiempo = 50;
+        const intervalo = setInterval(() => {
+            document.getElementById("temporizador").innerHTML = --tiempo > 0 ? tiempo : (clearInterval(intervalo), "¡Tiempo terminado!");
+        }, 1000);
+
+        // Usar setTimeout para detener el temporizador después de 50 segundos
+        setTimeout(() => {
+            clearInterval(intervalo);
+            document.getElementById("temporizador").innerHTML = "¡Tiempo terminado!";
+        }, 50000); // 50 segundos en milisegundos
+    </script>
+</body>
+</html>
