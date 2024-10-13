@@ -80,6 +80,18 @@
             animation: confetiAnim 1s forwards;
             animation-timing-function: linear; /* Fluidez en la animación */
         }
+
+        @media screen and (max-width: 1024px) {
+            .card {
+                width: calc(50% - 40px);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .card {
+                width: calc(100% - 40px);
+            }
+        }
     </style>
 </head>
 <body>
